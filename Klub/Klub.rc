@@ -1,0 +1,773 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Croatian (Croatia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HRV)
+LANGUAGE LANG_CROATIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\Klub.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#include ""afxprint.rc""    // printing/print preview resources\r\n"
+    "#include ""afxdb.rc""        // Database resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CLANOVI DIALOGEX 0, 0, 381, 230
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Klub - èlanovi"
+FONT 11, "Arial", 700, 0, 0xEE
+BEGIN
+    CONTROL         "Upis novog èlana",IDC_RD_NOVI_CLAN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,66,36,70,10
+    CONTROL         "Promjena podataka",IDC_RD_PROMJENA_CLANOVI,"Button",BS_AUTORADIOBUTTON,156,36,78,10
+    EDITTEXT        IDC_EDIT_IME_CLANA,32,70,90,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_CLANOVI_IMENA,32,86,90,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SPOL,136,70,28,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_DAT_ROD,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,187,70,50,12
+    COMBOBOX        IDC_COMBO_AKT,265,70,57,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_TEL,33,128,59,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADRESA,122,128,103,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MAIL,251,128,95,12,ES_AUTOHSCROLL
+    LTEXT           "Ime i prezime",IDC_STATIC_IME,32,60,90,8
+    LTEXT           "Spol",IDC_STATIC,136,60,14,8
+    LTEXT           "Datum roðenja",IDC_STATIC,188,60,48,8
+    LTEXT           "Aktivnost",IDC_STATIC,265,60,31,8
+    LTEXT           "Telefon",IDC_STATIC,33,118,25,8
+    LTEXT           "Adresa",IDC_STATIC,122,118,24,8
+    LTEXT           "Mail",IDC_STATIC,251,118,13,8
+    GROUPBOX        "Unos / Promjena podataka",IDC_STATIC,25,16,331,165,WS_GROUP
+    PUSHBUTTON      "Spremi",IDC_BTN_SPREMI,123,152,46,20,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Odustani",IDC_BTN_ODUSTANI,197,152,46,20,0,WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_EDIT_ID_CLANA,191,92,28,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "ID èlana",IDC_STATIC,164,95,26,8,NOT WS_VISIBLE
+    PUSHBUTTON      "Prikaži èlanove",IDC_BTN_PRIKAZI_CLANOVE,31,188,41,27,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Poèetna",IDC_BTN_POCETNA1,95,188,41,27,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Zatvori aplikaciju",IDC_BTN_ZATVORI1,287,188,41,27,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanarine",IDC_CLANARINE1,162,188,41,27,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Natjecanja",IDC_BTN_NATJECANJA1,224,188,41,27,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DIALOG_CLANARINE DIALOGEX 0, 0, 368, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Klub - Èlanarine"
+FONT 11, "Arial", 700, 0, 0xEE
+BEGIN
+    CONTROL         "Unos uplate",IDC_RD_UNOS_UPLATE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,60,27,57,10
+    CONTROL         "Promjena podataka",IDC_RD_PROMJENA_CLANARINE,"Button",BS_AUTORADIOBUTTON,121,26,85,10
+    COMBOBOX        IDC_COMBO_UPLATITELJ,35,54,97,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_DAT_UPLATE,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,207,56,46,12
+    COMBOBOX        IDC_COMBO_IZNOS_UPLATE,282,56,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_LISTA_UPLATA,25,84,193,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_SVRHA_UPLATE,228,84,102,12,ES_AUTOHSCROLL
+    LTEXT           "Uplatitelj",IDC_STATIC_UPLATITELJ,36,45,79,8
+    LTEXT           "Datum uplate",IDC_STATIC,206,45,50,8
+    LTEXT           "Iznos",IDC_STATIC,282,44,19,8
+    LTEXT           "Svrha uplate",IDC_STATIC,227,76,60,8
+    PUSHBUTTON      "Spremi",IDC_BTN_SPREMI,128,106,42,20,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Odustani",IDC_BTN_ODUSTANI,188,106,42,20,0,WS_EX_DLGMODALFRAME
+    GROUPBOX        "Static",IDC_STATIC,19,15,330,123
+    PUSHBUTTON      "Prikaži uplate",IDC_BTN_PRIKAZI_UPLATE,34,152,40,26,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    LTEXT           "Izaberite uplatu za promijeniti",IDC_STATIC_LISTA_UPLATA,25,74,136,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_ID_CLANARINE,35,112,48,30,CBS_DROPDOWN | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "IDclanarine",IDC_STATIC,35,103,40,8,NOT WS_VISIBLE
+    PUSHBUTTON      "Poèetna",IDC_BTN_POCETNA2,94,152,40,26,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Zatvori aplikaciju",IDC_BTN_ZATVORI2,289,152,40,26,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanovi",IDC_BTN_CLANOVIx,158,152,40,26,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Natjecanja",IDC_BTN_NATJECANJAx,222,152,40,26,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DIALOG_PRIKAZ_CLANOVA DIALOGEX 0, 0, 431, 201
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Klub - Prikaz èlanova"
+FONT 11, "Arial", 700, 0, 0xEE
+BEGIN
+    CONTROL         "",IDC_LIST_CLANOVI,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,42,417,106
+    CONTROL         "Prikaži aktivne",IDC_RD_AKTIVNI,"Button",BS_AUTORADIOBUTTON | WS_GROUP,44,20,63,10
+    CONTROL         "Prikaži neaktivne / ispisane",IDC_RD_NEAKTIVNI,"Button",BS_AUTORADIOBUTTON | BS_MULTILINE,124,17,71,15
+    CONTROL         "Prikaži sve",IDC_RD_SVI,"Button",BS_AUTORADIOBUTTON,207,20,51,10
+    PUSHBUTTON      "Prikaži",IDC_BTN_PRIKAZI,285,14,58,21,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Ispiši prikaz",IDC_BTN_ISPISI_PRIKAZ,50,160,41,24,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Zatvori aplikaciju",IDC_BTN_ZATVORI_APLIKACIJU,317,160,41,24,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Poèetna",IDC_BTN_POCETNA4,118,160,41,24,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanarine",IDC_BTN_CLANARINE4,185,160,41,24,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Natjecanja",IDC_BTN_NATJECANJA4,251,160,41,24,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DIALOG_PRIKAZ_CLANARINA DIALOGEX 0, 0, 340, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Klub - Prikaz èlanarina"
+FONT 11, "Arial", 700, 0, 0xEE
+BEGIN
+    CONTROL         "Za èlana",IDC_RD_CLAN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,17,38,10
+    CONTROL         "Za klub",IDC_RD_KLUB,"Button",BS_AUTORADIOBUTTON,177,16,38,10
+    CONTROL         "",IDC_DATE_OD,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,123,42,58,10
+    CONTROL         "",IDC_DATE_DO,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,192,42,58,10
+    PUSHBUTTON      "Prikaži",IDC_BTN_PRIKAZI,272,18,42,22,0,WS_EX_DLGMODALFRAME
+    CONTROL         "",IDC_LISTA,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,61,326,98
+    COMBOBOX        IDC_COMBO,58,15,95,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Sve uplate",IDC_RD_SVE_UPLATE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,42,50,10
+    CONTROL         "Za razdoblje",IDC_RD_RAZDOBLJE,"Button",BS_AUTORADIOBUTTON,71,42,49,10
+    LTEXT           "do",IDC_STATIC,182,43,9,8
+    GROUPBOX        "",IDC_STATIC,7,7,247,25
+    GROUPBOX        "",IDC_STATIC,7,31,247,28
+    EDITTEXT        IDC_EDIT_POM,267,49,40,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    PUSHBUTTON      "Ispiši prikaz",IDC_BTN_ISPISI_PRIKAZ,23,171,40,22,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Zatvori aplikaciju",IDC_BTN_ZATVORI_APLIKACIJU1,268,171,40,22,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Poèetna",IDC_BTN_POCETNA,83,171,40,22,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanovi",IDC_BTN_CLANOVI1,144,171,40,22,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Natjecanja",IDC_BTN_NATJECANJA1,206,171,40,22,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DIALOG_NATJECANJA DIALOGEX 0, 0, 382, 299
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Klub - Natjecanja"
+FONT 11, "Arial", 700, 0, 0xEE
+BEGIN
+    CONTROL         "Upis natjecanja",IDC_RD_UNOS_NATJECANJA,"Button",BS_AUTORADIOBUTTON | WS_GROUP,93,14,64,10
+    CONTROL         "Promjena unosa",IDC_RD_PROMJENA_UNOSA,"Button",BS_AUTORADIOBUTTON,164,14,64,10
+    EDITTEXT        IDC_EDIT_NAZIV_NATJECANJA,43,36,119,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_LISTA_NATJECANJA,43,56,178,12,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_KOEFICIJENT,268,36,40,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_DAT_ODRZAVANJA,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,189,36,54,11
+    LTEXT           "Naziv natjecanja",IDC_STATIC,43,26,61,8
+    LTEXT           "Datum održavanja",IDC_STATIC,190,26,52,8
+    LTEXT           "Koeficijent",IDC_STATIC,268,26,35,8
+    PUSHBUTTON      "Spremi",IDC_BTN_SPREMI_NATJ,244,54,37,19,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Odustani",IDC_BTN_ODUSTANI_NATJ,305,54,37,19,0,WS_EX_DLGMODALFRAME
+    GROUPBOX        "Natjecanja",IDC_GRUPA_NATJECANJA,23,7,338,76
+    PUSHBUTTON      "Spremi",IDC_BTN_SPREMI_REZ,131,226,37,19,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Odustani",IDC_BTN_ODUSTANI_REZ,215,226,37,19,0,WS_EX_DLGMODALFRAME
+    COMBOBOX        IDC_COMBO_NATJECANJE_REZ,40,128,164,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_NATJECATELJ,39,154,164,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "natjecanje",IDC_STATIC,40,117,65,8
+    LTEXT           "natjecatelj",IDC_STATIC,40,145,33,8
+    LTEXT           "Rezultat",IDC_STATIC,297,132,27,8
+    EDITTEXT        IDC_EDIT_KATEGORIJA,219,142,66,13,ES_AUTOHSCROLL
+    LTEXT           "Kategorija",IDC_STATIC,220,133,33,8
+    CONTROL         "Unos rezultata",IDC_RD_UNOS_REZULTATA,"Button",BS_AUTORADIOBUTTON | WS_GROUP,89,105,62,10
+    CONTROL         "Promjena unosa",IDC_RD_PROMJENA_REZULTATA,"Button",BS_AUTORADIOBUTTON,167,104,67,10
+    PUSHBUTTON      "Prikaži rezultate",IDC_BTN_PRIKAZI,35,258,41,26,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    GROUPBOX        "",IDC_STATIC,7,7,368,285,NOT WS_VISIBLE
+    CONTROL         "za natjecanje",IDC_RD_PROMJENA_REZ_ZA_NATJECANJE,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,248,105,57,10
+    CONTROL         "za natjecatelja",IDC_RD_PROMJENA_UNOSA_REZ_ZA_NATJECATELJA,
+                    "Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,248,117,61,10
+    GROUPBOX        "",IDC_STATIC,241,99,74,31
+    COMBOBOX        IDC_COMBO_REZULTAT,297,142,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_POM,170,204,137,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LISTBOX         IDC_LIST_PODACI,51,170,283,53,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Rezultati",IDC_STATIC,25,91,336,161
+    PUSHBUTTON      "Poèetna",IDC_BTN_POCETNA3,102,258,41,26,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Zatvori aplikaciju",IDC_BTN_ZATVORI3,296,258,41,26,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanovi",IDC_BTN_CLANOVI3,167,258,41,26,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanarine",IDC_BTN_CLANARINE3,232,258,41,26,0,WS_EX_DLGMODALFRAME
+END
+
+IDD_DIALOG_PRIKAZ_NATJECANJA DIALOGEX 0, 0, 399, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Klub - Prikaz natjecanja"
+FONT 11, "Arial", 700, 0, 0xEE
+BEGIN
+    CONTROL         "Za natjecatelja",IDC_RD_NATJECATELJ,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,16,61,10
+    CONTROL         "Za klub",IDC_RD_KLUB,"Button",BS_AUTORADIOBUTTON,15,33,38,10
+    CONTROL         "Za natjecanje",IDC_RD_NATJECANJE,"Button",BS_AUTORADIOBUTTON,15,50,57,10
+    COMBOBOX        IDC_COMBO_NATJECATELJ,80,14,93,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_NATJECANJE,80,50,151,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "od",IDC_STATIC,68,34,9,8
+    LTEXT           "do",IDC_STATIC,136,34,9,8
+    CONTROL         "",IDC_DATE_OD,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,80,32,51,12
+    CONTROL         "",IDC_DATE_DO,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,147,32,52,12
+    PUSHBUTTON      "Prikaži",IDC_BTN_PRIKAZI,280,30,50,22,0,WS_EX_DLGMODALFRAME
+    CONTROL         "",IDC_LISTA,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,92,383,94
+    EDITTEXT        IDC_EDIT_POM,175,74,203,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Static",IDC_STATIC_POM,144,76,19,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_POM,282,57,75,30,CBS_DROPDOWN | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Ispiši prikaz",IDC_BUTTON1,31,200,40,23,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Poèetna",IDC_BTN_POCETNA5,100,200,40,23,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Zatvori aplikaciju",IDC_BTN_ZATVORI5,292,200,40,23,BS_MULTILINE,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanovi",IDC_BTN_CLANOVI5,164,200,40,23,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Èlanarine",IDC_BTN_CLANARINE5,230,200,40,23,0,WS_EX_DLGMODALFRAME
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_CLANOVI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 374
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_DIALOG_CLANARINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 361
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_DIALOG_PRIKAZ_CLANOVA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 424
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DIALOG_PRIKAZ_CLANARINA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_DIALOG_NATJECANJA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 375
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 292
+    END
+
+    IDD_DIALOG_PRIKAZ_NATJECANJA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 390
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_CLANOVI AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_CLANARINE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_PRIKAZ_CLANOVA AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_PRIKAZ_CLANARINA AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_NATJECANJA AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_PRIKAZ_NATJECANJA AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_CLANOVI DLGINIT
+BEGIN
+    IDC_COMBO_SPOL, 0x403, 2, 0
+0x006d, 
+    IDC_COMBO_SPOL, 0x403, 2, 0
+0x009e, 
+    IDC_COMBO_AKT, 0x403, 8, 0
+0x6b61, 0x6974, 0x6176, 0x006e, 
+    IDC_COMBO_AKT, 0x403, 10, 0
+0x656e, 0x6b61, 0x6974, 0x6176, 0x006e, 
+    IDC_COMBO_AKT, 0x403, 8, 0
+0x7369, 0x6970, 0x6173, 0x006e, 
+    0
+END
+
+IDD_DIALOG_CLANARINE DLGINIT
+BEGIN
+    IDC_COMBO_IZNOS_UPLATE, 0x403, 10, 0
+0x3232, 0x2c30, 0x3030, 0x6b20, 0x006e, 
+    IDC_COMBO_IZNOS_UPLATE, 0x403, 10, 0
+0x3533, 0x2c30, 0x3030, 0x6b20, 0x006e, 
+    IDC_COMBO_IZNOS_UPLATE, 0x403, 9, 0
+0x656e, 0x7020, 0x616c, 0x61e6, "\000" 
+    IDC_COMBO_IZNOS_UPLATE, 0x403, 13, 0
+0x6562, 0x207a, 0x7274, 0x6e65, 0x6e69, 0x6167, "\000" 
+    0
+END
+
+IDD_DIALOG_NATJECANJA DLGINIT
+BEGIN
+    IDC_COMBO_REZULTAT, 0x403, 5, 0
+0x2e31, 0x6a6d, "\000" 
+    IDC_COMBO_REZULTAT, 0x403, 5, 0
+0x2e32, 0x6a6d, "\000" 
+    IDC_COMBO_REZULTAT, 0x403, 5, 0
+0x2e33, 0x6a6d, "\000" 
+    IDC_COMBO_REZULTAT, 0x403, 5, 0
+0x2e34, 0x6a6d, "\000" 
+    IDC_COMBO_REZULTAT, 0x403, 5, 0
+0x2e35, 0x6a6d, "\000" 
+    IDC_COMBO_REZULTAT, 0x403, 5, 0
+0x2e37, 0x6a6d, "\000" 
+    IDC_COMBO_REZULTAT, 0x403, 7, 0
+0x6562, 0x207a, 0x2e72, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Klub - poèetna\n\nKlub\n\n\nKlub.Document\nKlub.Document"
+END
+
+#endif    // Croatian (Croatia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Klub"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Klub, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2018",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_KLUB_FORM DIALOGEX 0, 0, 202, 154
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "Arial", 700, 0, 0xEE
+BEGIN
+    PUSHBUTTON      "Clanovi",IDC_BTN_CLANOVI,46,14,111,28,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Clanarine",IDC_BTN_CLANARINE,46,47,111,28,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Natjecanja",IDC_BTN_NATJECANJA,46,80,111,28,0,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Ispis",IDC_BTN_ISPIS,46,113,111,28,0,WS_EX_DLGMODALFRAME
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_KLUB_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_KLUB_FORM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\KarateIcon.ico"
+
+IDR_KlubTYPE            ICON                    "res\\KlubDoc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_RECORD_FIRST
+    BUTTON      ID_RECORD_PREV
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_LAST
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&Record"
+    BEGIN
+        MENUITEM "&First Record",               ID_RECORD_FIRST
+        MENUITEM "&Previous Record",            ID_RECORD_PREV
+        MENUITEM "&Next Record",                ID_RECORD_NEXT
+        MENUITEM "&Last Record",                ID_RECORD_LAST
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Klub...",              ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "Klub"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Klub.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "Klub.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDP_FAILED_OPEN_DATABASE "Cannot open database."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "Klub"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+END
+
+STRINGTABLE
+BEGIN
+    ID_RECORD_FIRST         "Move to first record\nFirst Record"
+    ID_RECORD_LAST          "Move to final record\nLast Record"
+    ID_RECORD_NEXT          "Move to next record\nNext Record"
+    ID_RECORD_PREV          "Move to previous record\nPrevious Record"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "res\Klub.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#include "afxprint.rc"    // printing/print preview resources
+#include "afxdb.rc"        // Database resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
