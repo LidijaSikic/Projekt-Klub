@@ -74,7 +74,7 @@ BOOL Dialog_prikaz_clanarina::OnInitDialog()
 
 	if (RClanovi->IsBOF() && RClanovi->IsEOF())
 	{
-		MessageBox(_T("U bazi nema podataka"), _T("Greška"), MB_ICONEXCLAMATION | MB_OK);		
+		MessageBox(_T("U bazi nema podataka"), _T("GreÅ¡ka"), MB_ICONEXCLAMATION | MB_OK);		
 	}
 	else
 	{
@@ -147,7 +147,7 @@ void Dialog_prikaz_clanarina::OnBnClickedBtnPrikazi()
 
 		if (RClanarine->IsBOF() && RClanarine->IsEOF())
 		{
-			MessageBox(_T("Èlan ") + ime + _T(" nema zabilježenih uplata"), _T("Obavijest"), MB_ICONINFORMATION | MB_OK);
+			MessageBox(_T("Ãˆlan ") + ime + _T(" nema zabiljeÅ¾enih uplata"), _T("Obavijest"), MB_ICONINFORMATION | MB_OK);
 		}
 		else
 		{
@@ -198,7 +198,7 @@ void Dialog_prikaz_clanarina::OnBnClickedBtnPrikazi()
 
 		if (RClanarine->IsBOF() && RClanarine->IsEOF())
 		{			
-				MessageBox(_T("U izabranom razdoblju nema zabilježenih uplata"), _T("Obavijest"), MB_ICONINFORMATION | MB_OK);
+				MessageBox(_T("U izabranom razdoblju nema zabiljeÅ¾enih uplata"), _T("Obavijest"), MB_ICONINFORMATION | MB_OK);
 		}
 		else
 		{
@@ -246,7 +246,7 @@ void Dialog_prikaz_clanarina::NadiIme(long IDclana)
 	strIDclana.Format(_T("%ld"), IDclana);
 	RClanovi->m_strFilter = (_T("[IDclana] = ") + strIDclana + _T(""));
 
-	if(!RClanovi->IsOpen());
+	if(!RClanovi->IsOpen())
 	RClanovi->Open();	
 	CString ime = RClanovi->m_ImePrezime;
 	RClanovi->Close();
