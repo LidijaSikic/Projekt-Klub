@@ -187,11 +187,11 @@ void DialogClanovi::promijeni()
 
 	if (!RClanovi->Update()) 
 	{
-		MessageBox(_T("Promjene nisu uspjeöno unesene"), _T("Greöka"), MB_ICONEXCLAMATION | MB_OK);
+		MessageBox(_T("Promjene nisu uspje≈°no unesene"), _T("Gre≈°ka"), MB_ICONEXCLAMATION | MB_OK);
 	}
 	else 
 	{
-		MessageBox(_T("Promjene su uspjeöno unesene"), _T("Obavijest"), MB_OK);
+		MessageBox(_T("Promjene su uspje≈°no unesene"), _T("Obavijest"), MB_OK);
 	}
 
 	UpdateData(FALSE);
@@ -206,7 +206,7 @@ void DialogClanovi::promijeni()
 void DialogClanovi::spremi()
 {
 	long nNoviID = 0;
-	if (!RClanovi->IsOpen());
+	if (!RClanovi->IsOpen())
 	RClanovi->Open();
 
 	long noviID = RClanovi->MaxID() + 1;
@@ -244,10 +244,10 @@ void DialogClanovi::spremi()
 	RClanovi->m_Aktivnost = aktivnost;
 
 	if (!RClanovi->Update())
-		MessageBox(_T("Unos novog Ëlana nije uspio"), _T("Greöka"),
+		MessageBox(_T("Unos novog √®lana nije uspio"), _T("Gre≈°ka"),
 			MB_ICONERROR | MB_OK);
 	else
-		MessageBox(_T("Novi Ëlan je uspjeöno unesen u bazu"), _T("Obavijest"),
+		MessageBox(_T("Novi √®lan je uspje≈°no unesen u bazu"), _T("Obavijest"),
 			MB_OK);
 	RClanovi->Requery();
 	RClanovi->Close();
@@ -265,7 +265,7 @@ void DialogClanovi::ucitaj_imena()
 
 			if (RClanovi->IsBOF() && RClanovi->IsEOF())
 			{
-				MessageBox(_T("U bazi nema podataka"), _T("Greöka"), MB_ICONEXCLAMATION | MB_OK);
+				MessageBox(_T("U bazi nema podataka"), _T("Gre≈°ka"), MB_ICONEXCLAMATION | MB_OK);
 				return;
 			}
 			else
@@ -366,20 +366,20 @@ bool DialogClanovi::provjeri_podatke()
 	}
 	if (text.IsEmpty())
 	{
-		MessageBox(_T("Nije uneseno ime Ëlana"), _T("Greöka"),
+		MessageBox(_T("Nije uneseno ime √®lana"), _T("Gre≈°ka"),
 			MB_ICONERROR | MB_OK);
 		m_edit_ime_clana.SetFocus();
 		return false;
 	}
-	else if ((spol != _T("m")) && (spol != _T("û")))
+	else if ((spol != _T("m")) && (spol != _T("≈æ")))
 	{
-		MessageBox(_T("Krivi unos! Za spol unesite: m ili û"), _T("Greöka"), MB_ICONERROR | MB_OK);					
+		MessageBox(_T("Krivi unos! Za spol unesite: m ili ≈æ"), _T("Gre≈°ka"), MB_ICONERROR | MB_OK);					
 			m_combo_spol.SetFocus();
 			return false;
 	}
 	else if ((aktivnost != _T("aktivan")) && (aktivnost != _T("neaktivan")) && (aktivnost != _T("ispisan")))
 	{
-		MessageBox(_T("Krivi unos! Za aktivnost unesite: aktivan, neaktivan ili ispisan"), _T("Greöka"),
+		MessageBox(_T("Krivi unos! Za aktivnost unesite: aktivan, neaktivan ili ispisan"), _T("Gre≈°ka"),
 			MB_ICONERROR | MB_OK);
 		m_combo_akt.SetFocus();
 		return false;
