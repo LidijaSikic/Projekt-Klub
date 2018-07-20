@@ -94,8 +94,9 @@ void DialogClanovi::OnBnClickedRdNoviClan()
 void DialogClanovi::OnBnClickedRdPromjenaClanovi()
 {
 	m_combo_clanovi_imena.ShowWindow(TRUE);	
-	ocisti();	
+		
 	ucitaj_imena();	
+	m_combo_clanovi_imena.ResetContent();
 }
 
 
@@ -125,6 +126,7 @@ void DialogClanovi::OnBnClickedBtnSpremi()
 void DialogClanovi::OnBnClickedBtnOdustani()
 {
 	ocisti();
+	
 }
 
 
@@ -139,9 +141,9 @@ void DialogClanovi::ocisti()
 	m_combo_akt.SetCurSel(0);
 	m_edit_tel.SetWindowTextW(_T(""));
 	m_edit_adresa.SetWindowTextW(_T(""));
-	m_edit_mail.SetWindowTextW(_T(""));
-	m_combo_clanovi_imena.ResetContent();
-	m_combo_clanovi_imena.SetCurSel(0);	
+	m_edit_mail.SetWindowTextW(_T(""));	
+	m_rb_upis_novog_clana.SetCheck(1);
+	m_rb_promjena_podataka_clanovi.SetCheck(0);
 }
 
 
