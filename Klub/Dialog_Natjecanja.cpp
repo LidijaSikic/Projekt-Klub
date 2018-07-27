@@ -714,10 +714,17 @@ void Dialog_Natjecanja::OnLbnSelchangeListPodaci()
 	CString ime;
 	NadiIme(RRezultati->m_IDclana);
 	m_edit_pom.GetWindowTextW(ime);
-	m_combo_natjecatelj.SetWindowTextW(ime);
+	if (m_combo_natjecatelj.FindStringExact(-1, ime) == LB_ERR)
+		m_combo_natjecatelj.SetCurSel(-1);
+	else
+		m_combo_natjecatelj.SetCurSel(m_combo_natjecatelj.FindStringExact(-1,  ime));
 
 	m_edit_kategorija.SetWindowTextW(RRezultati->m_Kategorija);
-	m_combo_rezultat.SetWindowTextW(RRezultati->m_Rezultat);
+	CString rez = RRezultati->m_Rezultat;
+	if(m_combo_rezultat.FindStringExact(-1, rez) == LB_ERR)
+		m_combo_rezultat.SetCurSel(-1);
+	else
+		m_combo_rezultat.SetCurSel(m_combo_rezultat.FindStringExact(-1, rez));
 }
 
 
