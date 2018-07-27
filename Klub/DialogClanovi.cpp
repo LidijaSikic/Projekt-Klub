@@ -301,13 +301,19 @@ void DialogClanovi::OnCbnSelchangeComboClanoviImena()
 	m_edit_ID_clana.SetWindowTextW(strIDclana);
 
 	CString spol = RClanovi->m_Spol;
-	m_combo_spol.SetWindowText(spol);
+	if(m_combo_spol.FindStringExact(-1, spol)==LB_ERR)
+		m_combo_spol.SetCurSel(-1);
+	else
+		m_combo_spol.SetCurSel(m_combo_spol.FindStringExact(-1, spol));
 
 	CTime datRod = RClanovi->m_DatumRodenja;
 	m_date_rod.SetTime(&datRod);
 
 	CString aktivnost = RClanovi->m_Aktivnost;
-	m_combo_akt.SetWindowTextW(aktivnost);
+	if (m_combo_akt.FindStringExact(-1, aktivnost) == LB_ERR)
+		m_combo_akt.SetCurSel(-1);
+	else
+		m_combo_akt.SetCurSel(m_combo_akt.FindStringExact(-1, aktivnost));
 
 	CString adresa = RClanovi->m_Adresa;
 	m_edit_adresa.SetWindowText(adresa);
