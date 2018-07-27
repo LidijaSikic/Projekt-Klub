@@ -725,6 +725,12 @@ void Dialog_Natjecanja::OnLbnSelchangeListPodaci()
 		m_combo_rezultat.SetCurSel(-1);
 	else
 		m_combo_rezultat.SetCurSel(m_combo_rezultat.FindStringExact(-1, rez));
+	
+	RRezultati->m_strFilter = _T("");
+	RRezultati->Close();
+	
+	m_combo_natjecanje_rez.EnableWindow(TRUE);
+	m_combo_natjecatelj.EnableWindow(TRUE);
 }
 
 
