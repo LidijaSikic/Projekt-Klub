@@ -142,7 +142,7 @@ void Dialog_Natjecanja::OnBnClickedBtnSpremiNatj()
 	int nNoviID = 0;
 	m_edit_naziv_natjecanja.GetWindowTextW(text);
 	if (text.IsEmpty()) {
-		MessageBox(_T("Nije unesen naziv natjecanja"), _T("Greška"),
+		MessageBox(_T("Nije unesen naziv natjecanja"), _T("GreÅ¡ka"),
 			MB_ICONERROR | MB_OK);
 		m_edit_naziv_natjecanja.SetFocus();
 		return;
@@ -193,7 +193,7 @@ void Dialog_Natjecanja::SpremiNatjecanje()
 	int nNoviID = 0;
 	m_edit_naziv_natjecanja.GetWindowTextW(text);
 	if (text.IsEmpty()) {
-		MessageBox(_T("Nije unesen naziv natjecanja"), _T("Greška"),
+		MessageBox(_T("Nije unesen naziv natjecanja"), _T("GreÅ¡ka"),
 			MB_ICONERROR | MB_OK);
 		m_edit_naziv_natjecanja.SetFocus();
 		return;
@@ -222,10 +222,10 @@ void Dialog_Natjecanja::SpremiNatjecanje()
 		RNatjecanja->m_Koeficijent = koef;
 
 		if (!RNatjecanja->Update())
-			MessageBox(_T("Unos novog natjecanja nije uspio"), _T("Greška"),
+			MessageBox(_T("Unos novog natjecanja nije uspio"), _T("GreÅ¡ka"),
 				MB_ICONERROR | MB_OK);
 		else
-			MessageBox(_T("Novo natjecanje je uspješno uneseno u bazu"), _T("Obavijest"),
+			MessageBox(_T("Novo natjecanje je uspjeÅ¡no uneseno u bazu"), _T("Obavijest"),
 				MB_OK);
 
 		RNatjecanja->Requery();
@@ -256,10 +256,10 @@ void Dialog_Natjecanja::PromijeniNatjecanje()
 	RNatjecanja->m_Koeficijent = koef;
 
 	if (!RNatjecanja->Update()) {
-		MessageBox(_T("Promjene nisu uspješno unesene"), _T("Greška"), MB_ICONEXCLAMATION | MB_OK);
+		MessageBox(_T("Promjene nisu uspjeÅ¡no unesene"), _T("GreÅ¡ka"), MB_ICONEXCLAMATION | MB_OK);
 	}
 	else {
-		MessageBox(_T("Promjene su uspješno unesene"), _T("Obavijest"), MB_OK);
+		MessageBox(_T("Promjene su uspjeÅ¡no unesene"), _T("Obavijest"), MB_OK);
 	}
 	RNatjecanja->Requery();
 	RNatjecanja->m_strFilter = _T("");
@@ -421,7 +421,7 @@ void Dialog_Natjecanja::UcitajNatjecatelje_rez()
 
 	if ((RClanovi->IsBOF()) && (RClanovi->IsEOF()))
 	{
-		MessageBox(_T("U bazi nema niti jedan èlan"), _T("Obavijest"),
+		MessageBox(_T("U bazi nema niti jedan Ã¨lan"), _T("Obavijest"),
 			MB_OK);
 		return;
 	}
@@ -647,9 +647,9 @@ void Dialog_Natjecanja::SpremiRez()
 	RRezultati->m_Rezultat = rezultat;
 
 	if (!RRezultati->Update())
-		MessageBox(_T("Unos novog rezultata nije uspio"), _T("Greška"), MB_ICONERROR | MB_OK);			
+		MessageBox(_T("Unos novog rezultata nije uspio"), _T("GreÅ¡ka"), MB_ICONERROR | MB_OK);			
 	else
-		MessageBox(_T("Novi rezultat je uspješno unesen u bazu"), _T("Obavijest"), MB_OK);
+		MessageBox(_T("Novi rezultat je uspjeÅ¡no unesen u bazu"), _T("Obavijest"), MB_OK);
 			
 	RRezultati->Requery();
 	RRezultati->Close();	
@@ -678,10 +678,10 @@ void Dialog_Natjecanja::PromijeniRez()
 	RRezultati->m_Rezultat = rezultat;
 
 	if (!RRezultati->Update()) {
-		MessageBox(_T("Promjene nisu uspješno unesene"), _T("Greška"), MB_ICONEXCLAMATION | MB_OK);
+		MessageBox(_T("Promjene nisu uspjeÅ¡no unesene"), _T("GreÅ¡ka"), MB_ICONEXCLAMATION | MB_OK);
 	}
 	else {
-		MessageBox(_T("Promjene su uspješno unesene"), _T("Obavijest"), MB_OK);
+		MessageBox(_T("Promjene su uspjeÅ¡no unesene"), _T("Obavijest"), MB_OK);
 	}
 	RRezultati->m_strFilter = _T("");
 	RRezultati->Requery();
@@ -706,7 +706,10 @@ void Dialog_Natjecanja::OnLbnSelchangeListPodaci()
 	CString naziv;
 	NadiNatjecanje(RRezultati->m_IDnatjecanja);
 	m_edit_pom.GetWindowTextW(naziv);
-	m_combo_natjecanje_rez.SetWindowTextW(naziv);
+	if (m_combo_natjecanje_rez.FindStringExact(-1, naziv) == LB_ERR)
+		m_combo_natjecanje_rez.SetCurSel(-1);
+	else
+		m_combo_natjecanje_rez.SetCurSel(m_combo_natjecanje_rez.FindStringExact(-1, naziv));
 
 	CString ime;
 	NadiIme(RRezultati->m_IDclana);
