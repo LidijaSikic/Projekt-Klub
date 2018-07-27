@@ -189,8 +189,11 @@ void DialogClanarine::OnCbnSelchangeComboListaUplata()
 	RClanarine->Open();
 
 	CString iznos = RClanarine->m_IznosUplate;
-	m_combo_iznos.SetWindowTextW(iznos);
-
+	if (m_combo_iznos.FindStringExact(-1, iznos) == LB_ERR)
+		m_combo_iznos.SetCurSel(-1);
+	else
+		m_combo_iznos.SetCurSel(m_combo_iznos.FindStringExact(-1, iznos));
+	
 	CTime datum = RClanarine->m_DatumUplate;
 	m_dat_uplate.SetTime(&datum);
 
@@ -261,10 +264,10 @@ void DialogClanarine::Spremi()
 		RClanarine->m_SvrhaUplate = svrha;
 
 		if (!RClanarine->Update())
-			MessageBox(_T("Unos nove uplate nije uspio"), _T("Greška"),
+			MessageBox(_T("Unos nove uplate nije uspio"), _T("GreÅ¡ka"),
 				MB_ICONERROR | MB_OK);
 		else
-			MessageBox(_T("Nova uplata je uspješno unesena u bazu"), _T("Obavijest"),
+			MessageBox(_T("Nova uplata je uspjeÅ¡no unesena u bazu"), _T("Obavijest"),
 				MB_OK);
 		RClanarine->Requery();
 	}
@@ -289,10 +292,10 @@ void DialogClanarine::Spremi()
 		RClanarine->m_SvrhaUplate = svrha;
 
 		if (!RClanarine->Update()) {
-			MessageBox(_T("Promjene nisu uspješno unesene"), _T("Greška"), MB_ICONEXCLAMATION | MB_OK);
+			MessageBox(_T("Promjene nisu uspjeÅ¡no unesene"), _T("GreÅ¡ka"), MB_ICONEXCLAMATION | MB_OK);
 		}
 		else {
-			MessageBox(_T("Promjene su uspješno unesene"), _T("Obavijest"), MB_OK);
+			MessageBox(_T("Promjene su uspjeÅ¡no unesene"), _T("Obavijest"), MB_OK);
 		}
 	}
 	RClanarine->Requery();
