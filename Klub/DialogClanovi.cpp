@@ -94,9 +94,8 @@ void DialogClanovi::OnBnClickedRdNoviClan()
 void DialogClanovi::OnBnClickedRdPromjenaClanovi()
 {
 	m_combo_clanovi_imena.ShowWindow(TRUE);	
-		
-	ucitaj_imena();	
-	m_combo_clanovi_imena.ResetContent();
+	m_combo_clanovi_imena.ResetContent();	
+	ucitaj_imena();		
 }
 
 
@@ -116,17 +115,14 @@ void DialogClanovi::OnBnClickedBtnSpremi()
 		promijeni();
 		ocisti();
 		
-		m_combo_clanovi_imena.SetCurSel(-1);
-		m_rb_upis_novog_clana.SetCheck(1);
-		m_rb_promjena_podataka_clanovi.SetCheck(0);
+		m_combo_clanovi_imena.SetCurSel(-1);		
 	}
 }
 
 
 void DialogClanovi::OnBnClickedBtnOdustani()
 {
-	ocisti();
-	
+	ocisti();	
 }
 
 
@@ -141,7 +137,8 @@ void DialogClanovi::ocisti()
 	m_combo_akt.SetCurSel(0);
 	m_edit_tel.SetWindowTextW(_T(""));
 	m_edit_adresa.SetWindowTextW(_T(""));
-	m_edit_mail.SetWindowTextW(_T(""));	
+	m_edit_mail.SetWindowTextW(_T(""));
+	m_combo_clanovi_imena.ShowWindow(FALSE);
 	m_rb_upis_novog_clana.SetCheck(1);
 	m_rb_promjena_podataka_clanovi.SetCheck(0);
 }
@@ -197,6 +194,7 @@ void DialogClanovi::promijeni()
 	}
 
 	UpdateData(FALSE);
+	RClanovi->Requery();
 	RClanovi->m_strFilter = "";
 	RClanovi->Close();
 
@@ -293,6 +291,7 @@ void DialogClanovi::OnCbnSelchangeComboClanoviImena()
 	m_edit_ime_clana.SetWindowTextW(ime);
 
 	RClanovi->m_strFilter = _T("[ImePrezime] = '") + ime + _T("'");
+	if(!RClanovi->IsOpen())
 	RClanovi->Open();
 
 	long IDclana = RClanovi->m_IDclana;
@@ -327,7 +326,8 @@ void DialogClanovi::OnCbnSelchangeComboClanoviImena()
 	CString strID;
 	long brID = RClanovi->m_IDclana;
 	strID.Format(_T("%ld"), brID);
-
+	
+	RClanovi->m_strFilter = _T("");
 	RClanovi->Close();	
 }
 
@@ -338,6 +338,7 @@ long DialogClanovi::nadi_ID_clana()
 	long IDclana;
 	m_edit_ime_clana.GetWindowTextW(ime);
 	RClanovi->m_strFilter = _T("ImePrezime = '") + ime + _T("'");
+	If(!RClanovi->IsOpen());
 	RClanovi->Open();
 	IDclana = RClanovi->m_IDclana;
 	RClanovi->Close();
