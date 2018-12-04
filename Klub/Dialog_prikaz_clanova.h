@@ -25,6 +25,12 @@ public:
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+	
+	CFont* m_pFntData;
+	CFont* m_pFntHeader1;
+	CFont* m_pFntHeader2;
+	CPen m_penBlack;
+	void PrintHeader(CDC* pDC, CPrintInfo *pInfo);
 
 	DECLARE_MESSAGE_MAP()
 public:
@@ -44,5 +50,10 @@ public:
 	afx_msg void OnBnClickedBtnNatjecanja4();
 	void popuni_naslove();
 	void popuni_listu();
+	void Print();
+	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
+	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
+	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);	
+	afx_msg void OnLvnItemchangedListClanovi(NMHDR *pNMHDR, LRESULT *pResult);
 };
 
