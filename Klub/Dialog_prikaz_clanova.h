@@ -54,6 +54,6 @@ public:
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);	
-	afx_msg void OnLvnItemchangedListClanovi(NMHDR *pNMHDR, LRESULT *pResult);
+	
 };
 
