@@ -338,7 +338,7 @@ long DialogClanovi::nadi_ID_clana()
 	long IDclana;
 	m_edit_ime_clana.GetWindowTextW(ime);
 	RClanovi->m_strFilter = _T("ImePrezime = '") + ime + _T("'");
-	If(!RClanovi->IsOpen());
+	If(!RClanovi->IsOpen())
 	RClanovi->Open();
 	IDclana = RClanovi->m_IDclana;
 	RClanovi->Close();
