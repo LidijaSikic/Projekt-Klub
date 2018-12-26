@@ -44,7 +44,6 @@ BEGIN_MESSAGE_MAP(Dialog_prikaz_clanova, CDialog)
 	ON_BN_CLICKED(IDC_BTN_POCETNA4, &Dialog_prikaz_clanova::OnBnClickedBtnPocetna4)
 	ON_BN_CLICKED(IDC_BTN_CLANARINE4, &Dialog_prikaz_clanova::OnBnClickedBtnClanarine4)
 	ON_BN_CLICKED(IDC_BTN_NATJECANJA4, &Dialog_prikaz_clanova::OnBnClickedBtnNatjecanja4)
-	ON_NOTIFY(LVN_ITEMCHANGED, IDC_LIST_CLANOVI, &Dialog_prikaz_clanova::OnLvnItemchangedListClanovi)
 END_MESSAGE_MAP()
 
 
